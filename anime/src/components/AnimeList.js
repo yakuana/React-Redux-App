@@ -12,16 +12,17 @@ import Anime from "./Anime.js";
 const AnimeList = props => {
   return (
     <div className="animelist-container">
-      <button id="data-btn" onClick={props.getAnimeData}>
+      <div className="data-btn" onClick={props.getAnimeData}>
         {props.isLoading ? (
           <PulseSpinner size={30}
           color="#686769"
           loading={props.isLoading}
           />
         ) : (
-          'Get Anime Data'
+          <button className="data-btn">Get Anime Data</button>
         )}
-      </button>
+      </div>
+
       <div className="episodes-container">
         {props.episodes && 
           props.episodes.map(episode => <Anime key={episode.episode_id} props={episode} />)}

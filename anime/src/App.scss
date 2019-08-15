@@ -1,0 +1,81 @@
+.App {
+    
+    .header {
+       margin: 0 auto 50px auto; 
+       text-align: center;
+
+        h1 {
+            font-size: 3rem; 
+        }
+
+        h2 {
+            font-size: 2rem; 
+        }
+    }
+
+}
+
+
+.animelist-container {
+
+    .data-btn {
+        width: 350px; 
+        height: 50px;
+        border-radius: 40px; 
+        margin: 0 auto; 
+        background: white;
+        color: black; 
+        font-size: 2.3rem;
+        text-align: center; 
+        border: 1.2px solid black; 
+
+        :hover {
+            background: darken(white, 30%);
+            font-size: 2.2rem;
+        }
+    }
+
+    .episodes-container {
+        display: flex; 
+        flex-flow: row wrap; 
+        justify-content: space-around;
+
+        .episode-container {
+            border: 1px solid black;
+            border-radius: 20px; 
+            width: 450px; 
+            height: 200px;
+
+            text-align: center;
+
+            margin: auto;
+            padding: 10px;
+
+            background: #333;
+
+            .japanese-title {
+                color: white; 
+                font-size: 2rem;
+            }
+
+            .eng-title {
+                color: whitesmoke; 
+                font-size: 1.5rem;
+            }
+
+            .watch {
+                font-size: 1.2 rem; 
+
+                .episode-link {
+                    text-decoration: none; 
+
+                    a:hover {
+                        text-decoration: underline dotted white; 
+                        color: darken(lightblue, 40%)
+                    }
+                }
+
+            }
+        }
+    }
+}
