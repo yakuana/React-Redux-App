@@ -8,13 +8,13 @@ export const getAnimeData = () => dispatch => {
 
     // loading data 
     dispatch({ type: FETCH_ANIME_DATA_START });
-    
+
     axios
-        .get('https://api.oceandrivers.com:443/v1.0/getWebCams/')
+        .get('https://api.jikan.moe/v3/anime/1/episodes')
         .then(response => {
             // successful 
             console.log("response data", response.data)
-            // dispatch({ type: FETCH_ANIME_DATA_SUCCESS, payload: res.data.data });
+            dispatch({ type: FETCH_ANIME_DATA_SUCCESS, payload: response.data.episodes });
         })
         .catch(error => {
             // unsuccessful 

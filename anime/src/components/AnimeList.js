@@ -1,7 +1,7 @@
 // react imports 
-import React from 'react';
-import { connect } from 'react-redux';
-import Loader from 'react-loader-spinner';
+import React from "react";
+import { connect } from "react-redux";
+import { PulseSpinner } from "react-spinners-kit";
 
 // actions  
 import { getAnimeData } from "../actions/index.js";
@@ -16,7 +16,10 @@ const AnimeList = props => {
 
       <button className="data-btn" onClick={props.getAnimeData}>
         {props.isLoading ? (
-          <Loader type="TailSpin" color="#6DAFCE" height={80} width={80} />
+          <PulseSpinner size={30}
+          color="#686769"
+          loading={props.isLoading}
+          />
         ) : (
           'Get Anime Data'
         )}
@@ -33,6 +36,7 @@ const mapStateToProps = state => {
     episodes: state.episodes
   };
 };
+
 export default connect(
   mapStateToProps,
   { getAnimeData }
