@@ -14,6 +14,7 @@ export const getAnimeData = () => dispatch => {
         .then(response => {
             // successful 
             console.log("response data", response.data)
+            
             dispatch({ type: FETCH_ANIME_DATA_SUCCESS, payload: response.data.episodes });
         })
         .catch(error => {

@@ -11,10 +11,8 @@ import Anime from "./Anime.js";
 
 const AnimeList = props => {
   return (
-    <>
-      <h1>Anime</h1>
-
-      <button className="data-btn" onClick={props.getAnimeData}>
+    <div className="animelist-container">
+      <button id="data-btn" onClick={props.getAnimeData}>
         {props.isLoading ? (
           <PulseSpinner size={30}
           color="#686769"
@@ -24,9 +22,11 @@ const AnimeList = props => {
           'Get Anime Data'
         )}
       </button>
-
-      {props.episodes && props.episodes.map(episode => <Anime key={episode.episode_id} props={episode} />)}
-    </>
+      <div className="episodes-container">
+        {props.episodes && 
+          props.episodes.map(episode => <Anime key={episode.episode_id} props={episode} />)}
+      </div>
+    </div>
   );
 };
 
