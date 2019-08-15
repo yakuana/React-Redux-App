@@ -22,7 +22,7 @@
         width: 350px; 
         height: 50px;
         border-radius: 40px; 
-        margin: 0 auto; 
+        margin: 0 auto 40px auto; 
         background: white;
         color: black; 
         font-size: 2.3rem;
@@ -42,18 +42,20 @@
 
         .episode-container {
             border: 1px solid black;
+            background-image: linear-gradient(rgb(79, 77, 77), #333);
             border-radius: 20px; 
-            width: 450px; 
-            height: 200px;
+            width: 470px; 
+            height: 250px;
 
             text-align: center;
 
-            margin: auto;
+            margin: 20px;
             padding: 10px;
 
-            background: #333;
+            // background: #333;
 
             .japanese-title {
+                margin-top: 40px; 
                 color: white; 
                 font-size: 2rem;
             }
@@ -64,10 +66,12 @@
             }
 
             .watch {
-                font-size: 1.2 rem; 
+                font-size: 1.2rem; 
+                color: white;
 
                 .episode-link {
-                    text-decoration: none; 
+                    text-decoration: underline; 
+                    color: rgb(155, 188, 208);
 
                     a:hover {
                         text-decoration: underline dotted white; 
